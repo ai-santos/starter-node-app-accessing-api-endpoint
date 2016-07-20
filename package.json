@@ -1,0 +1,18 @@
+{
+  "name": "node-temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Mihai Banulescu <mihai.banulescu@gmail.com> (http://github.com/bluemihai)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.9.2",
+    "request": "^2.73.0"
+  }
+}
