@@ -2,19 +2,19 @@ var express = require('express');
 var app = express();
 var request = require('request');
 
-var temp = null;
+var headers = {'User-Agent': 'Mihai B'};
+
+request({uri: 'https://woodpecker-instagram-api.herokuapp.com/api/v1/locations', headers: headers}, function (error, response, body) {
+  console.log('error', error);
+  console.log('response', response['body']);
+  if (!error && response.statusCode == 200) {
+    temp = body
+    console.log(body);
+  }
+})
 
 app.get('/', function (req, res) {
-  var temp = null;
-  alert('Hi')
-
-  request('https://api.github.com', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      temp = body;
-    }
-  })
-
-  res.send('Hello World!\n\n' + body);
+  res.send('Hello World!  XX');
 });
 
 app.listen(3000, function () {
